@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS tasks
 (
-    id           BIGSERIAL PRIMARY KEY,
+    id           SERIAL PRIMARY KEY,
     title        VARCHAR(200) NOT NULL,
     description  TEXT,
     status       TEXT         NOT NULL DEFAULT 'todo' CHECK (status IN ('todo', 'in_progress', 'done')),
